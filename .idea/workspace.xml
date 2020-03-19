@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BluetoothTest.testBT">
+  <component name="RunManager" selected="JUnit.ServerTest.test1">
     <configuration name="BluetoothTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
@@ -83,8 +84,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bluetooth_Hell_Requiem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
+      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.ServerTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServerTest.test1" />
         <item itemvalue="JUnit.BluetoothTest.testBT" />
         <item itemvalue="JUnit.BluetoothTest" />
       </list>
@@ -101,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584478943435</updated>
       <workItem from="1584478947005" duration="5795000" />
-      <workItem from="1584635251002" duration="2134000" />
+      <workItem from="1584635251002" duration="4566000" />
     </task>
     <servers />
   </component>
@@ -120,6 +138,25 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="((BluetoothRFCommClientConnection)((BluetoothRFCommInputStream)is).conn).in" custom="com.intel.bluetooth.BluetoothRFCommClientConnection,com.intel.bluetooth.BluetoothRFCommInputStream" />
