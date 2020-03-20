@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public class BluetoothTest {
@@ -14,6 +15,14 @@ public class BluetoothTest {
                 "btspp://001403055AA3:1;authenticate=false;encrypt=false;master=false.";
         Bluetooth test = new Bluetooth();
         test.initialize(hc05Url);
-        Assert.assertTrue(true);
+        try{
+            ArrayList<Short> data = test.fetchData();
+            for (Short s:data){
+                System.out.println(s);
+            }
+            Assert.assertTrue(data.get(3) >= 16000);
+        } catch (Exception e) {
+            Assert.assertTrue(false);
+        }
     }
 }

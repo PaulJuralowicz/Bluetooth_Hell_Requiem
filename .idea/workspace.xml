@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ARD_SRC/MPU6050_raw_modified/MPU6050_raw_modified.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ARD_SRC/MPU6050_raw_modified/MPU6050_raw_modified.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ServerTest.test1">
+  <component name="RunManager" selected="JUnit.BluetoothTest.testBT">
     <configuration name="BluetoothTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
@@ -100,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServerTest.test1" />
         <item itemvalue="JUnit.BluetoothTest.testBT" />
+        <item itemvalue="JUnit.ServerTest.test1" />
         <item itemvalue="JUnit.BluetoothTest" />
       </list>
     </recent_temporary>
@@ -118,7 +120,7 @@
       <updated>1584478943435</updated>
       <workItem from="1584478947005" duration="5795000" />
       <workItem from="1584635251002" duration="4736000" />
-      <workItem from="1584651428243" duration="2695000" />
+      <workItem from="1584651428243" duration="4130000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584652165420</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="slowly making the arduino work. give it some time">
+      <created>1584669361321</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584669361321</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,19 +163,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

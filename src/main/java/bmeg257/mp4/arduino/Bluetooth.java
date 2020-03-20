@@ -19,7 +19,7 @@ public class Bluetooth {
     private OutputStream os; //stream of bytes sent to arduino
     private InputStream is; //stream if byte recieved
     private StringBuilder dataGatherer = new StringBuilder(); // String builder that helps deal with data.
-    private ArrayList<Integer> currData = new ArrayList<>(); //list of integers that is the acutal data
+    private ArrayList<Short> currData = new ArrayList<>(); //list of integers that is the acutal data
     /**
      * currData order: AX, AY, AZ, GX, GY, GZ
      */
@@ -28,9 +28,9 @@ public class Bluetooth {
      * A constructor
      * @param url the address of bluetooth device you wish to connect to
      */
-    public static void initialize(String url) {
+    public void initialize(String url) {
         try {
-            new Bluetooth().go(url);
+            go(url);
         } catch (Exception ex) {
             Logger.getLogger(Bluetooth.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -60,11 +60,13 @@ public class Bluetooth {
      * @return A list of accelerations and gyroscope values, ordered in AX AY AZ GX GY GZ
      * @throws IOException if one of the streams fails
      */
-    public ArrayList<Integer> fetchData() throws IOException {
+    public ArrayList<Short> fetchData() throws IOException {
         currData.clear(); //clear data list
         os.write("1".getBytes()); //ask for data
-        while(is.available() == 0); //wait for input
-
+        for (int i = 0; i < 6; i++){
+            while(is.available() < 1);
+            currData.add((short)(((is.read() & 0xFF) << 8) | (is.read() & 0xFF)));
+        }
         return currData;
     }
 }

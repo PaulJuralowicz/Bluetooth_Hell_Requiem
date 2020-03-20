@@ -78,12 +78,18 @@ void loop() {
   if(BT.available() > 0){
     if ((char)BT.read() == '1'){
       accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-      //BT.write(ax); 
-      //BT.write(ay);
-      BT.write(az);/*
-      BT.write(gx);
-      BT.write(gy);
-      BT.write(gz);*/
+      BT.write(ax >> 8);
+      BT.write(ax & 0xFF);
+      BT.write(ay >> 8);
+      BT.write(ay & 0xFF);
+      BT.write(az >> 8);
+      BT.write(az & 0xFF);
+      BT.write(gx >> 8);
+      BT.write(gx & 0xFF);
+      BT.write(gy >> 8);
+      BT.write(gy & 0xFF);
+      BT.write(gz >> 8);
+      BT.write(gz & 0xFF);
       Serial.print("a/g:\t");
       Serial.print(ax); Serial.print("\t");
       Serial.print(ay); Serial.print("\t");
