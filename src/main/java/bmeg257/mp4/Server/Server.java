@@ -130,7 +130,7 @@ public class Server {
         try (FileWriter queriesWriter = new FileWriter(FILE_PATH, true)) {
             queriesWriter.write(input);
             queriesWriter.write("\n");
-            System.err.println("data writen");
+            System.err.println("data written");
         } catch (IOException e) {
             System.err.println("ERROR, QUERIES FILE CANT BE OPENED");
         }

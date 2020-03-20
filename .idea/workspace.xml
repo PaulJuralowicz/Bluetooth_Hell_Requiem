@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,8 +118,16 @@
       <updated>1584478943435</updated>
       <workItem from="1584478947005" duration="5795000" />
       <workItem from="1584635251002" duration="4736000" />
-      <workItem from="1584651428243" duration="707000" />
+      <workItem from="1584651428243" duration="2695000" />
     </task>
+    <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
+      <created>1584652165420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584652165420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +145,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="slowly making the arduino work. give it some time" />
+    <option name="LAST_COMMIT_MESSAGE" value="slowly making the arduino work. give it some time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
