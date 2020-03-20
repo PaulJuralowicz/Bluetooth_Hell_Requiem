@@ -20,7 +20,7 @@ public class BluetoothTest {
             for (Short s:data){
                 System.out.println(s);
             }
-            Assert.assertTrue(data.get(3) >= 16000);
+            Assert.assertTrue(data.get(2) >= 16000);
         } catch (Exception e) {
             Assert.assertTrue(false);
         }
