@@ -43,6 +43,23 @@ public class ServerTest {
             long curr = System.currentTimeMillis();
             while (System.currentTimeMillis() < curr + 2000) {
             }
+            client.closeConnection();
+        } catch (Exception e) {
+            System.out.println("NO");
+            Assert.fail();
+        }
+    }
+    /**
+     * Test if when pinged, the server responds
+     */
+    @Test
+    public void test2() {
+        startServer();
+        try {
+            Client client = new Client("localhost", 4949);
+            String response = client.recieve("{PING}");
+            System.out.println(response);
+            Assert.assertEquals(response, "{PONG}");
         } catch (Exception e) {
             System.out.println("NO");
             Assert.fail();

@@ -120,6 +120,7 @@ public class Server {
         currClients.incrementAndGet();
         System.err.println("client connected");
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
         while (!in.ready()) {
         }
         StringBuilder inBuilder = new StringBuilder();
@@ -127,14 +128,21 @@ public class Server {
             inBuilder.append(in.readLine());
         }
         String input = inBuilder.toString();
-        try (FileWriter queriesWriter = new FileWriter(FILE_PATH, true)) {
-            queriesWriter.write(input);
-            queriesWriter.write("\n");
-            System.err.println("data written");
-        } catch (IOException e) {
-            System.err.println("ERROR, QUERIES FILE CANT BE OPENED");
+        if (input.equals("{PING}")){
+            System.err.println("PING REQUEST RECIEVED");
+            out.write("{PONG}");
+            out.flush();
+        } else {
+            try (FileWriter queriesWriter = new FileWriter(FILE_PATH, true)) {
+                queriesWriter.write(input);
+                queriesWriter.write("\n");
+                System.err.println("data written");
+            } catch (IOException e) {
+                System.err.println("ERROR, QUERIES FILE CANT BE OPENED");
+            }
         }
         in.close();
+        out.close();
         socket.close();
     }
 }
