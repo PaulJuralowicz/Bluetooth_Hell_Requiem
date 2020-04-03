@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="" />
+    <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ServerTest.test2">
+  <component name="RunManager" selected="Application.GameMaster">
+    <configuration name="GameMaster" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.GameMaster" />
+      <module name="Bluetooth_Hell_Requiem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.bmeg257.mp4.Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BluetoothTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
@@ -113,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameMaster" />
         <item itemvalue="JUnit.ServerTest.test2" />
         <item itemvalue="JUnit.ServerTest.test1" />
         <item itemvalue="JUnit.BluetoothTest.testBT" />
@@ -133,7 +150,7 @@
       <workItem from="1584478947005" duration="5795000" />
       <workItem from="1584635251002" duration="4736000" />
       <workItem from="1584651428243" duration="4600000" />
-      <workItem from="1585884024684" duration="1965000" />
+      <workItem from="1585884024684" duration="2521000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -177,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585885972783</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="The server and client can talk. So in theory, Highscores can be recieved by the clinet!">
+      <created>1585886014791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585886014791</updated>
+    </task>
+    <task id="LOCAL-00008" summary="The server and client can talk. So in theory, Highscores can be recieved by the clinet!">
+      <created>1585886067652</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585886067652</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
