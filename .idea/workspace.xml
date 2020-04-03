@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/test/java/bmeg257/mp4/test/ServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/test/java/bmeg257/mp4/test/ServerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +133,7 @@
       <workItem from="1584478947005" duration="5795000" />
       <workItem from="1584635251002" duration="4736000" />
       <workItem from="1584651428243" duration="4600000" />
-      <workItem from="1585884024684" duration="1719000" />
+      <workItem from="1585884024684" duration="1965000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -169,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584671369795</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="The server and client can talk. So in theory, Highscores can be recieved by the clinet!">
+      <created>1585885925163</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585885925163</updated>
+    </task>
+    <task id="LOCAL-00006" summary="The server and client can talk. So in theory, Highscores can be recieved by the clinet!">
+      <created>1585885972783</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585885972783</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +199,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="slowly making the arduino work. give it some time" />
     <MESSAGE value="Bluetooth works fully!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bluetooth works fully!" />
+    <MESSAGE value="The server and client can talk. So in theory, Highscores can be recieved by the clinet!" />
+    <option name="LAST_COMMIT_MESSAGE" value="The server and client can talk. So in theory, Highscores can be recieved by the clinet!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,21 +264,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java</url>
           <line>127</line>
           <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
