@@ -1,15 +1,20 @@
 package main.java.bmeg257.mp4.Server;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.io.*;
 
 /**
  * Server will take in client sent data and write it to a text file. Nothing too crazy.
+ *
+ * Fun fact, most of this is copied from the final project of CPEN 221 where I had to make a server!
+ * Luckily, that thing was fairly comprehensive so I can modifying a lot.
  */
 
 public class Server {
@@ -21,12 +26,21 @@ public class Server {
     private AtomicInteger maxClients;
     private AtomicInteger currClients = new AtomicInteger(0);
     private static final String FILE_PATH = "local/data.txt";
+    private static final String FAMOUS_HEROES = "local/leaderboard.txt";
+    private static final String FOLDER_PATH = "local";
+    private ArrayList<Player> leaderboard = new ArrayList<>();
+    private static final int LEADERBOARD_SIZE = 10;
 
     /**
      * Abstract functions:
      * SeverSocket is the socket the server uses, with its specific port
      * maxClients is the number of concurrent requests the server can complete
      * currClients is the number of clients currently connected
+     * FILE_PATH is path to a data log
+     * FAMOUT_HEROES is path to the leaderboard WOO
+     * FOLDER_PATH is just the path to the folder that holds all the stuff.
+     * leaderboard is the ordered leader board of big boy players.
+     * LEADERBOARD_SIZE is the size of the leaderboard the server will send
      */
 
     /**
@@ -58,6 +72,7 @@ public class Server {
      * @param n    the number of concurrent requests the server can handle
      */
     public Server(int port, int n) {
+        restoreLeaderboard();
         try {
             serverSocket = new ServerSocket(port);
         } catch (IOException e) {
@@ -71,6 +86,26 @@ public class Server {
                 serve();
             } catch (IOException e) {
                 System.out.println("The server socket is broken, you fool.");
+            }
+        }
+    }
+
+    /**
+     * Restores the leaderboard, from a file!
+     */
+    private void restoreLeaderboard() {
+        if (new File(FOLDER_PATH).list().length > 1) {
+            try (Scanner leaderboardReader = new Scanner(new FileReader(FAMOUS_HEROES))) {
+                String username;
+                int score;
+                while (leaderboardReader.hasNextLine()) {
+                    username = leaderboardReader.next();
+                    score = leaderboardReader.nextInt();
+                    leaderboard.add(new Player(username, score));
+                }
+                leaderboard.sort((x,y) -> Integer.compare(y.getScore(),x.getScore()));
+            } catch (IOException e) {
+                System.err.println("File not found");
             }
         }
     }
@@ -110,7 +145,9 @@ public class Server {
     }
 
     /**
-     * Handle one client connection. Returns when it is done writing to file
+     * Handle one client connection. Returns when it is done.
+     * Yes it is messy, and should probably handle each case in its own function, but whatever.
+     * I am sorry, Sathish Sensei
      *
      * @param socket socket where client is connected
      * @throws IOException if connection encounters an error
@@ -131,6 +168,14 @@ public class Server {
         if (input.equals("{PING}")){
             System.err.println("PING REQUEST RECIEVED");
             out.write("{PONG}");
+            out.flush();
+        }if (input.equals("{leaderboardGet}")){
+            System.err.println("SENDING FAMOUS HEROES");
+            StringBuilder leaderBuilder = new StringBuilder();
+            for (int i = 0; i < LEADERBOARD_SIZE && i < leaderboard.size(); i++){
+                leaderBuilder.append((i+1) + ": " + leaderboard.get(i).getUsername() + "\t\t\t" + leaderboard.get(i).getScore() + "\n");
+            }
+            out.write("{" + leaderBuilder.toString() + "}");
             out.flush();
         } else {
             try (FileWriter queriesWriter = new FileWriter(FILE_PATH, true)) {

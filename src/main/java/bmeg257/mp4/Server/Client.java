@@ -38,9 +38,10 @@ public class Client {
      * sends a string to the server
      * @param toSend some non null string that is properly formated
      */
-    public void send(String toSend){
+    public void send(String toSend) throws IOException{
         out.println(toSend);
         out.flush();
+        closeConnection();
     }
 
     /**
@@ -63,9 +64,16 @@ public class Client {
         StringBuilder inBuilder = new StringBuilder();
         while (!in.ready()) {
         }
-        while (inBuilder.length() == 0 || inBuilder.charAt(inBuilder.length() - 1) != '}') {
+        boolean complete = false;
+        while (!complete) {
             inBuilder.append(in.readLine());
+            if (inBuilder.charAt(inBuilder.length()-1) != '}') {
+                inBuilder.append("\n");
+            } else {
+                complete = true;
+            }
         }
+        closeConnection();
         return inBuilder.toString();
     }
 

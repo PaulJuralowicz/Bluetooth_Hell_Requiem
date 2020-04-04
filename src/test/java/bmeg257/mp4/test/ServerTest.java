@@ -65,4 +65,19 @@ public class ServerTest {
             Assert.fail();
         }
     }
+    /**
+     * Tests leaderboard
+     */
+    @Test
+    public void test3() {
+        startServer();
+        try {
+            Client client = new Client("localhost", 4949);
+            String response = client.recieve("{leaderboardGet}");
+            System.out.println(response);
+        } catch (Exception e) {
+            System.out.println("NO");
+            Assert.fail();
+        }
+    }
 }

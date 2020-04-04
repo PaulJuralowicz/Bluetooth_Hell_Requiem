@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/Server/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/Server/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/Server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/Server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/test/java/bmeg257/mp4/test/ServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/test/java/bmeg257/mp4/test/ServerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +73,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BluetoothTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
         <pattern>
@@ -73,23 +82,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
-      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.BluetoothTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BluetoothTest.testBT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bluetooth_Hell_Requiem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
-      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.BluetoothTest" />
-      <option name="METHOD_NAME" value="testBT" />
+      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.GameTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,13 +121,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bluetooth_Hell_Requiem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
+      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.ServerTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameMaster" />
+        <item itemvalue="JUnit.GameTest.test1" />
+        <item itemvalue="JUnit.ServerTest.test3" />
         <item itemvalue="JUnit.ServerTest.test2" />
         <item itemvalue="JUnit.ServerTest.test1" />
-        <item itemvalue="JUnit.BluetoothTest.testBT" />
-        <item itemvalue="JUnit.BluetoothTest" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +160,8 @@
       <workItem from="1584478947005" duration="5795000" />
       <workItem from="1584635251002" duration="4736000" />
       <workItem from="1584651428243" duration="4600000" />
-      <workItem from="1585884024684" duration="2521000" />
+      <workItem from="1585884024684" duration="2688000" />
+      <workItem from="1585977199276" duration="6384000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -208,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585886067652</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="We gaming now">
+      <created>1585886582741</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585886582741</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +249,8 @@
     <MESSAGE value="slowly making the arduino work. give it some time" />
     <MESSAGE value="Bluetooth works fully!" />
     <MESSAGE value="The server and client can talk. So in theory, Highscores can be recieved by the clinet!" />
-    <option name="LAST_COMMIT_MESSAGE" value="The server and client can talk. So in theory, Highscores can be recieved by the clinet!" />
+    <MESSAGE value="We gaming now" />
+    <option name="LAST_COMMIT_MESSAGE" value="We gaming now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -242,59 +261,24 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="21" />
+          <line>67</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="22" />
+          <line>68</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java</url>
-          <line>129</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Server.java</url>
-          <line>127</line>
-          <option name="timeStamp" value="35" />
+          <line>69</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
