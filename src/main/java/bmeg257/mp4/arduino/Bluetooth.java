@@ -55,18 +55,17 @@ public class Bluetooth {
     /**
      * Fetches data from arduino appon request
      *
-     * THIS IS DANGEROUS AS IT RETURNS THE LIST AS IS, SO IT IS
-     * MUTABLE. TAKE CARE TO COPY THE LIST LATER.
      * @return A list of accelerations and gyroscope values, ordered in AX AY AZ GX GY GZ
      * @throws IOException if one of the streams fails
      */
-    public ArrayList<Short> fetchData() throws IOException {
+    public Motion6 fetchData() throws IOException {
         currData.clear(); //clear data list
-        os.write("1".getBytes()); //ask for data
+        os.write("l".getBytes()); //ask for data
         for (int i = 0; i < 6; i++){
             while(is.available() < 1);
             currData.add((short)(((is.read() & 0xFF) << 8) | (is.read() & 0xFF)));
         }
-        return currData;
+        return new Motion6(currData.get(0),currData.get(1),currData.get(2),
+                           currData.get(3),currData.get(4),currData.get(5));
     }
 }
