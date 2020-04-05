@@ -75,8 +75,17 @@ void setup() {
  * Waits for computer to tell it it wants data, and then sends it
  */
 void loop() {
+  /*
+  accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+  Serial.print("a/g:\t");
+  Serial.print(ax); Serial.print("\t");
+  Serial.print(ay); Serial.print("\t");
+  Serial.print(az); Serial.print("\t");
+  Serial.print(gx); Serial.print("\t");
+  Serial.print(gy); Serial.print("\t");
+  Serial.println(gz); */
   if(BT.available() > 0){
-    if ((char)BT.read() == 'l'){
+    if ((char)BT.read() == 'l'){ 
       accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
       BT.write(ax >> 8);
       BT.write(ax & 0xFF);
@@ -89,7 +98,7 @@ void loop() {
       BT.write(gy >> 8);
       BT.write(gy & 0xFF);
       BT.write(gz >> 8);
-      BT.write(gz & 0xFF);
+      BT.write(gz & 0xFF); 
     } 
     blinkState = !blinkState;
     digitalWrite(LED_PIN, blinkState);

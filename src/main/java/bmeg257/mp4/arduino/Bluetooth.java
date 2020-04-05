@@ -68,4 +68,20 @@ public class Bluetooth {
         return new Motion6(currData.get(0),currData.get(1),currData.get(2),
                            currData.get(3),currData.get(4),currData.get(5));
     }
+    /**
+     * Fetches raw data from arduino appon request
+     *
+     * @return A list of accelerations and gyroscope values, ordered in AX AY AZ GX GY GZ
+     * @throws IOException if one of the streams fails
+     */
+    public Motion6Raw fetchDataRaw() throws IOException {
+        currData.clear(); //clear data list
+        os.write("l".getBytes()); //ask for data
+        for (int i = 0; i < 6; i++){
+            while(is.available() < 1);
+            currData.add((short)(((is.read() & 0xFF) << 8) | (is.read() & 0xFF)));
+        }
+        return new Motion6Raw(currData.get(0),currData.get(1),currData.get(2),
+                currData.get(3),currData.get(4),currData.get(5));
+    }
 }
