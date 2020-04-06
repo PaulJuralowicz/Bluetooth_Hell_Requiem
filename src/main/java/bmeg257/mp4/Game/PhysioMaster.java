@@ -1,5 +1,6 @@
 package main.java.bmeg257.mp4.Game;
 
+import main.java.bmeg257.mp4.Server.Client;
 import main.java.bmeg257.mp4.Server.Player;
 import main.java.bmeg257.mp4.Server.Server;
 import main.java.bmeg257.mp4.arduino.Bluetooth;
@@ -39,6 +40,10 @@ public class PhysioMaster {
         startServer();
     }
 
+    /**
+     * Since, for demo purposes, the server is hosted locally, this starts the server
+     * It is on its own thread! So it acts like its own program for all intents and purposes!
+     */
     private void startServer(){
         server = new Thread(new Runnable() {
             Server s;
@@ -53,6 +58,11 @@ public class PhysioMaster {
         }
     }
 
+    /**
+     * Loads the baseline excercise data from a file
+     * @param filePath the file path
+     * @return baseline excercise arraylist
+     */
     private ArrayList<Motion6Raw> reconstructor(String filePath) {
         ArrayList<Motion6Raw> returnList = new ArrayList<>();
         try (Scanner motionReader = new Scanner(new FileReader(filePath))) {
@@ -69,11 +79,18 @@ public class PhysioMaster {
         return returnList;
     }
 
+    /**
+     * Ah yes, main. The entrance point for this monstrosity
+     * @param args
+     */
     public static void main(String args[]){
         PhysioMaster pm = new PhysioMaster();
         pm.mainMenu();
     }
 
+    /**
+     * Displays main menu, lets ya navigate. Fun
+     */
     private void mainMenu(){
         System.out.println("\n" +
                 "\n" +
@@ -104,7 +121,8 @@ public class PhysioMaster {
             System.out.println("Hello " + userName + ", Please, select what you want to do");
             System.out.println("1 - Physio Regiment");
             System.out.println("2 - Game");
-            System.out.println("3 - EXIT");
+            System.out.println("3 - Survey");
+            System.out.println("4 - EXIT");
             playerInput = keyboard.nextLine();
             if (playerInput.equals("1")){
                 physio();
@@ -112,6 +130,8 @@ public class PhysioMaster {
                 GameMaster gm = new GameMaster(false);
                 gm.start(hipab, hipex, seatedkneeraise, sensor, userName);
             } else if (playerInput.equals("3")){
+                survey();
+            }else if (playerInput.equals("4")){
                 System.out.println("Goodbye!");
                 return;
             } else {
@@ -120,6 +140,9 @@ public class PhysioMaster {
         }
     }
 
+    /**
+     * This is the physio portion, where ya do the physio excercise. Fun
+     */
     private void physio(){
         //TODO: VIDEO
         System.out.println("Lets do knee raise");
@@ -230,5 +253,30 @@ public class PhysioMaster {
         }
         System.out.println("Excercise complete! Good work!");
         System.out.println("Physio complete!");
+        System.out.println("Please complete the post physio excercise!");
+        survey();
+    }
+
+    /**
+     * Survey asking how the patient feels!
+     */
+    private void survey (){
+        StringBuilder survey = new StringBuilder();
+        survey.append("{USERNAME: " + userName + " ");
+        System.out.println("On a scale of 1 to 5, with 1 being a lot and 5 being none, what is your level of pain this week?");
+        survey.append("PAIN: "+ keyboard.nextInt() + " ");
+        System.out.println("On a scale of 1 to 5, with 1 being none and 5 being a lot, what is your level of motion this week");
+        survey.append("FLEX: " + keyboard.nextInt() + " ");
+        System.out.println("Any comments or questions for your physio therapist?");
+        keyboard.nextLine(); //fixes a bug. Weird I know
+        String response = keyboard.nextLine();
+        survey.append("COMMENT: " + response + "}");
+        System.out.println("Thank you, have a nice day!");
+        try {
+            Client surveySender = new Client();
+            surveySender.send(survey.toString());
+        } catch (IOException e) {
+            System.err.println("Failure to connect to server");
+        }
     }
 }

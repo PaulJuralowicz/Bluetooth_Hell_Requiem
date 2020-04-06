@@ -135,6 +135,7 @@ public class GameMaster {
      * A big function that does the entire dungeon game
      */
     private void enterDungeon(){
+        //setup
         int playerHealth = 10;
         int score = 0;
         int room = 0;
@@ -150,7 +151,9 @@ public class GameMaster {
         System.out.println("You enter the dungeon, what horrors, or treasures, will you find?");
         pause(500);
         boolean dead = false;
+        //this is the main game loop that keeps looping till you die
         while(!dead){
+            //select random monster, copy it
             room++;
             System.out.println("You enter room " + room +"...");
             pause(1000);
@@ -159,6 +162,7 @@ public class GameMaster {
             System.out.println(roomEnemy.display());
             System.out.println("\"" + roomEnemy.getRandTaunt() + "\" It shouts!");
             pause(1000);
+            //the battle loop, keeps going till you or monster die :(
             while(roomEnemy.getHealth() > 0 && !dead){
                 System.out.println("Player Health: " + playerHealth + "\tEnemy Health: " + roomEnemy.getHealth() +"\tGold: " + score);
                 System.out.println("What will you do? \n");
@@ -168,6 +172,7 @@ public class GameMaster {
                 if (playerInput.equals("1")){
                     System.out.println("You attack!");
                     String attack = excerciseList.get(rand.nextInt(excerciseList.size()));
+                    //selected a random excercise, now you gotta do it to attack
                     if (attack.equals("Seated Knee Raise")){
                         System.out.println("Complete 1 "+ attack +" to attack the monster!");
                         int damage = (int) (4 * evalKnee());
@@ -189,6 +194,7 @@ public class GameMaster {
                 } else if (playerInput.equals("2")) {
                     System.out.println("You heal!");
                     String attack = excerciseList.get(rand.nextInt(excerciseList.size()));
+                    //selected a random excercise, now do it to heal
                     if (attack.equals("Seated Knee Raise")){
                         System.out.println("Complete 1 "+ attack +" to heal!");
                         int damage = (int) (4 * evalKnee());
@@ -217,15 +223,19 @@ public class GameMaster {
                     dead = true;
                 }
             }
+            // you escaped the battle loop, with you or monster being dead. If it is monster that died
+            // add its score to total score, otherwise, don't
             if (!dead){
                 System.out.println("The monster is vanquished! You find " + roomEnemy.getScore() +" gold in the room!");
                 score += roomEnemy.getScore();
             }
         }
+        //You died, but lets keep this PG 13, game is over, total score is displayed as well as room number
         pause(500);
         System.out.println("Woah! Luckily I found you traveler, looks like you made it all the way to room "
                            + room +"\nwith " + score +" Gold! thats a good haul!\nLet me write it down on the leaderboard!");
         try{
+            //upload score to leaderboard
             leaderboard.send("{leaderboardput U:" + username +" S:" + score + "}");
         } catch (IOException e){
             System.out.println("Oops, looks like I am out of ink (server connection failed)");
@@ -297,6 +307,10 @@ public class GameMaster {
         return calc.similarity(hipex,curr)/0.25;
     }
 
+    /**
+     * to give people time to read, the game pauses. This function does it.
+     * @param millis
+     */
     private void pause(long millis){
         long start = System.currentTimeMillis();
         while(start + millis > System.currentTimeMillis()){}

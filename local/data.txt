@@ -3,3 +3,4 @@
 {PING}
 {leaderboardGet}
 {leaderboardGet}
+{USERNAME: Test1 PAIN: 5 FLEX: 5 COMMENT: This is a Test}
