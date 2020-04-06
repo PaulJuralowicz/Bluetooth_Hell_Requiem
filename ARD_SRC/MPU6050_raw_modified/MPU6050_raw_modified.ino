@@ -59,8 +59,8 @@ void setup() {
     Serial.println("Updating internal sensor offsets...");
     // -76  -2359 1688  0 0 0
     
-    accelgyro.CalibrateAccel(6);
-    accelgyro.CalibrateGyro(6);
+    /*accelgyro.CalibrateAccel(6);
+    accelgyro.CalibrateGyro(6);*/
     accelgyro.PrintActiveOffsets();
     
 
@@ -75,8 +75,8 @@ void setup() {
  * Waits for computer to tell it it wants data, and then sends it
  */
 void loop() {
-  /*
-  accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+  
+ /* accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
   Serial.print("a/g:\t");
   Serial.print(ax); Serial.print("\t");
   Serial.print(ay); Serial.print("\t");

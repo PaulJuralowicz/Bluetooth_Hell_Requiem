@@ -68,14 +68,14 @@ public class GameMaster {
         System.out.println("Hello travelar, please select your path! \n");
         System.out.println("1 - ENTER THE DUNGEON");
         System.out.println("2 - VIEW FAMOUS HEROES");
-        System.out.println("3 - EXIT");
+        System.out.println("3 - EXIT DUNGEON");
         playerInput = keyboard.nextLine();
         if (playerInput.equals("1")){
             enterDungeon();
         } else if (playerInput.equals("2")){
             displayLeaderBoard();
         } else if (playerInput.equals("3")){
-            System.out.println("Goodbye!");
+            System.out.println("Goodbye, travaller!\n");
             return;
         } else {
             System.out.println("Ehh? I didn't catch that");

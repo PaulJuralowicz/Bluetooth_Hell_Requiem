@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Motion6Raw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/CaclulatorTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/PhysioMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Recorder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ARD_SRC/MPU6050_raw_modified/MPU6050_raw_modified.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ARD_SRC/MPU6050_raw_modified/MPU6050_raw_modified.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Bluetooth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Bluetooth.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/test/java/bmeg257/mp4/test/BluetoothTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/test/java/bmeg257/mp4/test/BluetoothTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/Motion6Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/Motion6Test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,13 +55,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BluetoothTest.testBTSPEED">
-    <configuration name="GameMaster" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.GameMaster" />
+  <component name="RunManager" selected="Application.PhysioMaster">
+    <configuration name="PhysioMaster" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.PhysioMaster" />
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.java.bmeg257.mp4.Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Recorder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.arduino.Recorder" />
+      <module name="Bluetooth_Hell_Requiem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.bmeg257.mp4.arduino.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,22 +114,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Motion6Test.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bluetooth_Hell_Requiem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
-      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.Motion6Test" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Motion6Test.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
@@ -139,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PhysioMaster" />
+        <item itemvalue="Application.Recorder" />
         <item itemvalue="JUnit.BluetoothTest.testBTSPEED" />
         <item itemvalue="JUnit.CaclulatorTests.test1" />
         <item itemvalue="JUnit.Motion6Test.test2" />
-        <item itemvalue="JUnit.Motion6Test.test1" />
-        <item itemvalue="Application.GameMaster" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +155,7 @@
       <workItem from="1584651428243" duration="4600000" />
       <workItem from="1585884024684" duration="2688000" />
       <workItem from="1585977199276" duration="6472000" />
-      <workItem from="1586066522113" duration="7425000" />
+      <workItem from="1586066522113" duration="15008000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -241,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586068896743</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Sim calc added">
+      <created>1586124534979</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1586124534979</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +267,8 @@
     <MESSAGE value="We gaming now" />
     <MESSAGE value="WE&#10;GOT&#10;LEADERBOARDS" />
     <MESSAGE value="Slowly adding motion tracking. Slowly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Slowly adding motion tracking. Slowly" />
+    <MESSAGE value="Sim calc added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sim calc added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

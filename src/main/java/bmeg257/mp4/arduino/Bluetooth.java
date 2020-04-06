@@ -15,7 +15,6 @@ import java.util.ArrayList;
  * This is the RAW data, so your gonna get a bunch of 16 bit signed integers. FUN
  */
 public class Bluetooth {
-    byte[] data = new byte[200]; //buffer for input stream
     private OutputStream os; //stream of bytes sent to arduino
     private InputStream is; //stream if byte recieved
     private StringBuilder dataGatherer = new StringBuilder(); // String builder that helps deal with data.
