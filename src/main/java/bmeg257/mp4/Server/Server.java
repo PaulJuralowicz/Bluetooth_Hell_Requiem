@@ -177,6 +177,27 @@ public class Server {
             }
             out.write("{" + leaderBuilder.toString() + "}");
             out.flush();
+        } if (input.contains("leaderboardput")) {
+            StringBuilder username = new StringBuilder();
+            for (int i = 18; input.charAt(i) != ' '; i++){
+                username.append(input.charAt(i));
+            }
+            StringBuilder score = new StringBuilder();
+            for(int i = 18 + username.length() + 3; input.charAt(i) != '}';i++){
+                score.append(input.charAt(i));
+            }
+            leaderboard.add(new Player(username.toString(), Integer.parseInt(score.toString())));
+            leaderboard.sort((x,y) -> Integer.compare(y.getScore(),x.getScore()));
+            try (FileWriter leaderWriter = new FileWriter(FAMOUS_HEROES, true)) {
+                leaderWriter.write("\n");
+                leaderWriter.write(username.toString());
+                leaderWriter.write("\n");
+                leaderWriter.write(score.toString());
+                System.err.println("data written");
+            } catch (IOException e) {
+                System.err.println("ERROR, HEROES FILE CANT BE OPENED");
+            }
+
         } else {
             try (FileWriter queriesWriter = new FileWriter(FILE_PATH, true)) {
                 queriesWriter.write(input);

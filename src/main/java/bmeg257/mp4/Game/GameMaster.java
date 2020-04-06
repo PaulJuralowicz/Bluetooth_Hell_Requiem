@@ -51,6 +51,15 @@ public class GameMaster {
         }
     }
 
+    /**
+     * Initialize some stuff, display a cool ascii art of the title
+     * @param hipab             base for motion hip abduction
+     * @param hipex             base for motion hip extension
+     * @param seatedkneeraise   base for motion seated knee raise
+     * @param sensor            the bluetooth
+     * @param username          username for highscore!
+     */
+
     public void start(ArrayList<Motion6Raw> hipab, ArrayList<Motion6Raw> hipex,
                       ArrayList<Motion6Raw> seatedkneeraise, Bluetooth sensor, String username){
         this.hipab = hipab;
@@ -77,6 +86,10 @@ public class GameMaster {
         mainMenu();
     }
 
+    /**
+     * The main menu interface
+     */
+
     private void mainMenu(){
         System.out.println("Hello travelar, please select your path! \n");
         System.out.println("1 - ENTER THE DUNGEON");
@@ -96,6 +109,9 @@ public class GameMaster {
         }
     }
 
+    /**
+     * Displayes the leadboard after talking to the server
+     */
     private void displayLeaderBoard(){
         try {
             StringBuilder toDisplay = new StringBuilder();
@@ -115,6 +131,9 @@ public class GameMaster {
         }
     }
 
+    /**
+     * A big function that does the entire dungeon game
+     */
     private void enterDungeon(){
         int playerHealth = 10;
         int score = 0;
@@ -123,13 +142,15 @@ public class GameMaster {
         ArrayList<Monster> enemy = new ArrayList<>();
         ArrayList<String> excerciseList = new ArrayList<>();
         excerciseList.add("Seated Knee Raise");
-        //excerciseList.add("Hip Abduction");
-        //excerciseList.add("Hip Extension");
+        excerciseList.add("Hip Abduction");
+        excerciseList.add("Hip Extension");
         enemy.add(new Goblin());
+        enemy.add(new Tony());
         Monster roomEnemy;
         System.out.println("You enter the dungeon, what horrors, or treasures, will you find?");
         pause(500);
-        while(playerHealth > 0){
+        boolean dead = false;
+        while(!dead){
             room++;
             System.out.println("You enter room " + room +"...");
             pause(1000);
@@ -138,7 +159,7 @@ public class GameMaster {
             System.out.println(roomEnemy.display());
             System.out.println("\"" + roomEnemy.getRandTaunt() + "\" It shouts!");
             pause(1000);
-            while(roomEnemy.getHealth() > 0){
+            while(roomEnemy.getHealth() > 0 && !dead){
                 System.out.println("Player Health: " + playerHealth + "\tEnemy Health: " + roomEnemy.getHealth() +"\tGold: " + score);
                 System.out.println("What will you do? \n");
                 System.out.println("1 - Attack");
@@ -153,6 +174,18 @@ public class GameMaster {
                         System.out.println("Excellent attack! " + damage + " damage done!");
                         roomEnemy.lowerHealth(damage);
                     }
+                    if (attack.equals("Hip Abduction")){
+                        System.out.println("Complete 1 "+ attack +" to attack the monster!");
+                        int damage = (int) (4 * evalHipab());
+                        System.out.println("Excellent attack! " + damage + " damage done!");
+                        roomEnemy.lowerHealth(damage);
+                    }
+                    if (attack.equals("Hip Extension")){
+                        System.out.println("Complete 1 "+ attack +" to attack the monster!");
+                        int damage = (int) (4 * evalHipex());
+                        System.out.println("Excellent attack! " + damage + " damage done!");
+                        roomEnemy.lowerHealth(damage);
+                    }
                 } else if (playerInput.equals("2")) {
                     System.out.println("You heal!");
                     String attack = excerciseList.get(rand.nextInt(excerciseList.size()));
@@ -162,24 +195,46 @@ public class GameMaster {
                         System.out.println("Excellent heal! " + damage + " damage healed!");
                         playerHealth += damage;
                     }
+                    if (attack.equals("Hip Abduction")){
+                        System.out.println("Complete 1 "+ attack +" to heal!");
+                        int damage = (int) (4 * evalHipab());
+                        System.out.println("Excellent heal! " + damage + " damage healed!");
+                        playerHealth += damage;
+                    }
+                    if (attack.equals("Hip Extension")){
+                        System.out.println("Complete 1 "+ attack +" to heal!");
+                        int damage = (int) (4 * evalHipex());
+                        System.out.println("Excellent heal! " + damage + " damage healed!");
+                        playerHealth += damage;
+                    }
                 }
                 pause(2000);
                 System.out.println(roomEnemy.display());
-                System.out.println(roomEnemy.getRandTaunt());
+                System.out.println("\"" + roomEnemy.getRandTaunt() + "\"");
                 System.out.println("The mosnter attacks! "+ roomEnemy.getAttack() + " damage dealt!");
                 playerHealth -= roomEnemy.getAttack();
+                if (playerHealth <= 0) {
+                    dead = true;
+                }
             }
-            System.out.println("The monster is vanquished! You find " + roomEnemy.getScore() +" gold in the room!");
-            score += roomEnemy.getScore();
+            if (!dead){
+                System.out.println("The monster is vanquished! You find " + roomEnemy.getScore() +" gold in the room!");
+                score += roomEnemy.getScore();
+            }
         }
         pause(500);
         System.out.println("Woah! Luckily I found you traveler, looks like you made it all the way to room "
-                           + room +"\nwith " + score +" Gold! thats a good haul!");
+                           + room +"\nwith " + score +" Gold! thats a good haul!\nLet me write it down on the leaderboard!");
+        try{
+            leaderboard.send("{leaderboardput U:" + username +" S:" + score + "}");
+        } catch (IOException e){
+            System.out.println("Oops, looks like I am out of ink (server connection failed)");
+        }
         mainMenu();
     }
 
     /**
-     * Next 3 methods are for healing purpose, calc how well you did the motion.
+     * Next 3 methods are for healing/damage dealing purpose, calc how well you did the motion.
      * @return
      */
     private double evalKnee(){

@@ -80,4 +80,21 @@ public class ServerTest {
             Assert.fail();
         }
     }
+
+    /**
+     * Tests leaderboard add
+     */
+    @Test
+    public void test4() {
+        startServer();
+        try {
+            Client client = new Client("localhost", 4949);
+            client.send("{leaderboardput U:GIORNO S:0}");
+            long start = System.currentTimeMillis();
+            while(start + 500 > System.currentTimeMillis()){}
+        } catch (Exception e) {
+            System.out.println("NO");
+            Assert.fail();
+        }
+    }
 }
