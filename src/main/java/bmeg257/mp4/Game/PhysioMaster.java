@@ -15,16 +15,19 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class PhysioMaster {
-    private ArrayList<Motion6Raw> hipab;
-    private ArrayList<Motion6Raw> hipex;
-    private ArrayList<Motion6Raw> seatedkneeraise;
-    private String userName;
-    private String playerInput;
-    private Scanner keyboard;
-    private Bluetooth sensor;
-    private Thread server;
-    private Calculator calc;
+    private ArrayList<Motion6Raw> hipab; //base mvmt of hip abduction
+    private ArrayList<Motion6Raw> hipex; //base mvmt of hipex
+    private ArrayList<Motion6Raw> seatedkneeraise; //base mvmt of seatedkneeraise
+    private String userName; //user name of dude
+    private String playerInput; //holds stuff from scanner
+    private Scanner keyboard; // the scanner that grabs input
+    private Bluetooth sensor; // bluetooth device that streams data
+    private Thread server; // the server
+    private Calculator calc; //thing that calcs sim
 
+    /**
+     * Constructor that initializes everything
+     */
     public PhysioMaster(){
         hipab = reconstructor("local/hipab(8s).txt");
         hipex = reconstructor("local/hipex(8s).txt");
@@ -33,7 +36,7 @@ public class PhysioMaster {
         sensor = new Bluetooth();
         sensor.initialize("btspp://001403055AA3:1;authenticate=false;encrypt=false;master=false.");
         calc = new Calculator();
-        //startServer();
+        startServer();
     }
 
     private void startServer(){
@@ -107,7 +110,7 @@ public class PhysioMaster {
                 physio();
             } else if (playerInput.equals("2")){
                 GameMaster gm = new GameMaster(false);
-                gm.start();
+                gm.start(hipab, hipex, seatedkneeraise, sensor, userName);
             } else if (playerInput.equals("3")){
                 System.out.println("Goodbye!");
                 return;
@@ -120,8 +123,8 @@ public class PhysioMaster {
     private void physio(){
         //TODO: VIDEO
         System.out.println("Lets do knee raise");
-        System.out.println("3 reps");
-        ArrayList<Motion6Raw> curr = new ArrayList<>();
+        System.out.println("5 reps");
+        ArrayList<Motion6Raw> curr;
         System.out.println("enter t to start");
         boolean pause = true;
         while (pause){
@@ -130,7 +133,8 @@ public class PhysioMaster {
             }
         }
         int rep = 0;
-        while(rep < 3){
+        while(rep < 5){
+            curr = new ArrayList<>();
             try{
                 long start = System.currentTimeMillis();
                 while(start + 5000 > System.currentTimeMillis()){
@@ -139,13 +143,92 @@ public class PhysioMaster {
             } catch (IOException e){
                 System.err.println("COM ERROR!");
             }
-            if (calc.similarity(seatedkneeraise,curr) > 1E-10){
+            if (calc.similarity(seatedkneeraise,curr) > 0.25){
                 System.out.println("Good!");
                 rep++;
             } else {
-                System.out.println("not quite, try again!");
+                System.out.println("not quite, try again! Reset your position and enter t to continue!");
+                pause = true;
+                while (pause){
+                    if (keyboard.nextLine().equals("t")){
+                        pause = false;
+                    }
+                }
             }
         }
         System.out.println("Excercise complete! Good work!");
+        //TODO: VIDEO
+        System.out.println("Lets do hip extension");
+        System.out.println("5 reps");
+        System.out.println("enter t to start");
+        pause = true;
+        while (pause){
+            if (keyboard.nextLine().equals("t")){
+                pause = false;
+            }
+        }
+        rep = 0;
+        while(rep < 5){
+            curr = new ArrayList<>();
+            try{
+                long start = System.currentTimeMillis();
+                while(start + 8000 > System.currentTimeMillis()){
+                    curr.add(sensor.fetchDataRaw());
+                }
+            } catch (IOException e){
+                System.err.println("COM ERROR!");
+            }
+            if (calc.similarity(hipex,curr) > 0.1){
+                System.out.println("Good!");
+                rep++;
+            } else {
+                System.out.println("not quite, try again! Reset your position and enter t to continue!");
+                pause = true;
+                while (pause){
+                    if (keyboard.nextLine().equals("t")){
+                        pause = false;
+                    }
+                }
+            }
+        }
+        System.out.println("Excercise complete! Good work!");
+        //TODO: VIDEO
+        System.out.println("Lets do hip abduction");
+        System.out.println("5 reps");
+        System.out.println("enter t to start");
+        pause = true;
+        while (pause){
+            if (keyboard.nextLine().equals("t")){
+                pause = false;
+            }
+        }
+        rep = 0;
+        while(rep < 5){
+            curr = new ArrayList<>();
+            try{
+                long start = System.currentTimeMillis();
+                while(start + 8000 > System.currentTimeMillis()){
+                    curr.add(sensor.fetchDataRaw());
+                }
+            } catch (IOException e){
+                System.err.println("COM ERROR!");
+            }
+            double sim = calc.similarity(hipab,curr);
+            System.out.println(sim);
+            if (calc.similarity(hipab,curr) > 0.1){
+                System.out.println("Good!");
+                rep++;
+            } else {
+                System.out.println("not quite, try again! Reset your position and enter t to continue!");
+                pause = true;
+                while (pause){
+                    if (keyboard.nextLine().equals("t")){
+                        pause = false;
+                    }
+                }
+            }
+        }
+        System.out.println("Excercise complete! Good work!");
+        System.out.println("Physio complete!");
     }
 }

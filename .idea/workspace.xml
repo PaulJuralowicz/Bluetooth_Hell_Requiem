@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/PhysioMaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Recorder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/Goblin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARD_SRC/MPU6050_raw_modified/MPU6050_raw_modified.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ARD_SRC/MPU6050_raw_modified/MPU6050_raw_modified.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Bluetooth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Bluetooth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bluetooth_Hell_Requiem/main/java/bmeg257/mp4/arduino/Calculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/GameMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Bluetooth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/PhysioMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/PhysioMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Recorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/arduino/Recorder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,8 +135,8 @@
       <list>
         <item itemvalue="Application.PhysioMaster" />
         <item itemvalue="Application.Recorder" />
-        <item itemvalue="JUnit.BluetoothTest.testBTSPEED" />
         <item itemvalue="JUnit.CaclulatorTests.test1" />
+        <item itemvalue="JUnit.BluetoothTest.testBTSPEED" />
         <item itemvalue="JUnit.Motion6Test.test2" />
       </list>
     </recent_temporary>
@@ -155,7 +156,7 @@
       <workItem from="1584651428243" duration="4600000" />
       <workItem from="1585884024684" duration="2688000" />
       <workItem from="1585977199276" duration="6472000" />
-      <workItem from="1586066522113" duration="15008000" />
+      <workItem from="1586066522113" duration="27436000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586124534979</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="we are so close to greatness">
+      <created>1586132385652</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1586132385652</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +276,8 @@
     <MESSAGE value="WE&#10;GOT&#10;LEADERBOARDS" />
     <MESSAGE value="Slowly adding motion tracking. Slowly" />
     <MESSAGE value="Sim calc added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sim calc added" />
+    <MESSAGE value="we are so close to greatness" />
+    <option name="LAST_COMMIT_MESSAGE" value="we are so close to greatness" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

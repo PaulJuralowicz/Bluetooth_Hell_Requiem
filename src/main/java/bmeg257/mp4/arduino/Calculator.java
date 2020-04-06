@@ -89,12 +89,12 @@ public class Calculator {
     private double computeAOrC(ArrayList<Motion6Raw> sw1) {
         double componentAOrC = 0;
         for (int i = 0; i < sw1.size(); i++) {
-            componentAOrC += (sw1.get(i).getAX() * sw1.get(i).getAX())
-                    + (sw1.get(i).getAY() * sw1.get(i).getAY())
-                    + (sw1.get(i).getAZ() * sw1.get(i).getAZ())
-                    + (sw1.get(i).getGX() * sw1.get(i).getGX())
-                    + (sw1.get(i).getGY() * sw1.get(i).getGY())
-                    + (sw1.get(i).getGZ() * sw1.get(i).getGZ());
+            componentAOrC += ((sw1.get(i).getAX()/32768.0) * (sw1.get(i).getAX()/32768.0))
+                    + ((sw1.get(i).getAY()/32768.0) * (sw1.get(i).getAY()/32768.0))
+                    + ((sw1.get(i).getAZ()/32768.0) * (sw1.get(i).getAZ()/32768.0))
+                    + ((sw1.get(i).getGX()/32768.0) * (sw1.get(i).getGX()/32768.0))
+                    + ((sw1.get(i).getGY()/32768.0) * (sw1.get(i).getGY()/32768.0))
+                    + ((sw1.get(i).getGZ()/32768.0) * (sw1.get(i).getGZ()/32768.0));
         }
         return componentAOrC;
     }
@@ -109,12 +109,12 @@ public class Calculator {
     private double computeB(ArrayList<Motion6Raw> sw1, ArrayList<Motion6Raw> sw2) {
         double componentB = 0;
         for (int i = 0; i < sw2.size(); i++) {
-            componentB += (sw1.get(i).getAX() * sw2.get(i).getAX())
-                    + (sw1.get(i).getAY() * sw2.get(i).getAY())
-                    + (sw1.get(i).getAZ() * sw2.get(i).getAZ())
-                    + (sw1.get(i).getGX() * sw2.get(i).getGX())
-                    + (sw1.get(i).getGY() * sw2.get(i).getGY())
-                    + (sw1.get(i).getGZ() * sw2.get(i).getGZ());
+            componentB += ((sw1.get(i).getAX()/32768.0) * (sw2.get(i).getAX()/32768.0))
+                    + ((sw1.get(i).getAY()/32768.0) * (sw2.get(i).getAY()/32768.0))
+                    + ((sw1.get(i).getAZ()/32768.0) * (sw2.get(i).getAZ()/32768.0))
+                    + ((sw1.get(i).getGX()/32768.0) * (sw2.get(i).getGX()/32768.0))
+                    + ((sw1.get(i).getGY()/32768.0) * (sw2.get(i).getGY()/32768.0))
+                    + ((sw1.get(i).getGZ()/32768.0) * (sw2.get(i).getGZ()/32768.0));
         }
         return componentB;
     }
