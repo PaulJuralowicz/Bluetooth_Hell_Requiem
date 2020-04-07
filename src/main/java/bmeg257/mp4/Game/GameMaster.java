@@ -20,7 +20,6 @@ public class GameMaster {
     private ArrayList<Motion6Raw> seatedkneeraise; //base mvmt of seatedkneeraise
     private Bluetooth sensor; // bluetooth device that streams data
     private Scanner keyboard; //read player input
-    private Client leaderboard; //connect to server
     private String playerInput; //general player input string
     private Calculator calc; //calcs how good your heals and attacks are!
     private Thread server; //For debugging mostly, if the server needs to be made.
@@ -29,12 +28,7 @@ public class GameMaster {
     public GameMaster(boolean startServer){
         calc = new Calculator();
         keyboard = new Scanner(System.in);
-        try {
-            if(startServer) startServer();
-            leaderboard = new Client();
-        } catch (IOException e){
-            System.err.println("ERROR, UNABLE TO CONNECT TO SERVER");
-        }
+        if(startServer) startServer();
     }
 
     private void startServer(){
@@ -114,6 +108,7 @@ public class GameMaster {
      */
     private void displayLeaderBoard(){
         try {
+            Client leaderboard = new Client();
             StringBuilder toDisplay = new StringBuilder();
             toDisplay.append(leaderboard.recieve("{leaderboardGet}"));
             toDisplay.deleteCharAt(0);
@@ -147,6 +142,8 @@ public class GameMaster {
         excerciseList.add("Hip Extension");
         enemy.add(new Goblin());
         enemy.add(new Tony());
+        enemy.add(new Eye());
+        enemy.add(new Orc());
         Monster roomEnemy;
         System.out.println("You enter the dungeon, what horrors, or treasures, will you find?");
         pause(500);
@@ -168,6 +165,7 @@ public class GameMaster {
                 System.out.println("What will you do? \n");
                 System.out.println("1 - Attack");
                 System.out.println("2 - Heal");
+                System.out.println("Anything else - nothing");
                 playerInput = keyboard.nextLine();
                 if (playerInput.equals("1")){
                     System.out.println("You attack!");
@@ -221,6 +219,7 @@ public class GameMaster {
                 playerHealth -= roomEnemy.getAttack();
                 if (playerHealth <= 0) {
                     dead = true;
+                    System.out.println("And with that, you fall to the ground...");
                 }
             }
             // you escaped the battle loop, with you or monster being dead. If it is monster that died
@@ -231,15 +230,17 @@ public class GameMaster {
             }
         }
         //You died, but lets keep this PG 13, game is over, total score is displayed as well as room number
-        pause(500);
+        pause(2000);
         System.out.println("Woah! Luckily I found you traveler, looks like you made it all the way to room "
                            + room +"\nwith " + score +" Gold! thats a good haul!\nLet me write it down on the leaderboard!");
         try{
             //upload score to leaderboard
+            Client leaderboard = new Client();
             leaderboard.send("{leaderboardput U:" + username +" S:" + score + "}");
         } catch (IOException e){
             System.out.println("Oops, looks like I am out of ink (server connection failed)");
         }
+        pause(2000);
         mainMenu();
     }
 
