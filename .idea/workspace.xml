@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,6 +152,7 @@
       <workItem from="1586066522113" duration="31370000" />
       <workItem from="1586210814431" duration="5045000" />
       <workItem from="1586274865784" duration="622000" />
+      <workItem from="1586282005407" duration="243000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -272,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586221285464</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adding comments and such">
+      <created>1586282134229</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586282134229</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +312,8 @@
     <MESSAGE value="Added t̵̼̥̭́̈́̂̃ŏ̴̝̘̀͝ǹ̷̲͖̇̕̕ỷ̶̳͇̳̑͗̽͝" />
     <MESSAGE value="Survey added" />
     <MESSAGE value="Added orc and eye enemies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added orc and eye enemies" />
+    <MESSAGE value="Adding comments and such" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding comments and such" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -328,11 +337,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java</url>
           <line>69</line>
           <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

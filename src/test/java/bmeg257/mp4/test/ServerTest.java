@@ -43,6 +43,7 @@ public class ServerTest {
             long curr = System.currentTimeMillis();
             while (System.currentTimeMillis() < curr + 2000) {
             }
+            //to check if it worked, check the data file in local
             client.closeConnection();
         } catch (Exception e) {
             System.out.println("NO");
@@ -75,6 +76,8 @@ public class ServerTest {
             Client client = new Client("localhost", 4949);
             String response = client.recieve("{leaderboardGet}");
             System.out.println(response);
+            //should see the scores and stuff surrounded by curly brackets. Some extra formating need to be done
+            //but that can be handled else where.
         } catch (Exception e) {
             System.out.println("NO");
             Assert.fail();
@@ -92,6 +95,7 @@ public class ServerTest {
             client.send("{leaderboardput U:GIORNO S:0}");
             long start = System.currentTimeMillis();
             while(start + 500 > System.currentTimeMillis()){}
+            //check leaderboard file in local to confirm that it worked.
         } catch (Exception e) {
             System.out.println("NO");
             Assert.fail();
