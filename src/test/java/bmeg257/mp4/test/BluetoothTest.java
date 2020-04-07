@@ -32,6 +32,7 @@ public class BluetoothTest {
      */
     @Test
     public void testBTSPEED(){
+        //connect
         String hc05Url =
                 "btspp://001403055AA3:1;authenticate=false;encrypt=false;master=false.";
         Bluetooth test = new Bluetooth();
@@ -40,9 +41,12 @@ public class BluetoothTest {
             ArrayList<Motion6Raw> testList = new ArrayList<>();
             long start = System.currentTimeMillis();
             for(int i = 0; i < 60; i++){
+                //fetch 60 data packet, see how long it takes
                 testList.add(test.fetchDataRaw());
             }
+            Assert.assertTrue(System.currentTimeMillis() - start < 1000);
             System.out.println(System.currentTimeMillis() - start);
+            //to calc exact data just see how long it actually took.
         } catch (Exception e) {
             Assert.assertTrue(false);
         }
