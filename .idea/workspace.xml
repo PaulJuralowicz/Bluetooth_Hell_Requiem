@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/ServerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -26,16 +25,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,6 +50,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.PhysioMaster">
+    <configuration name="MediaPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.MediaPlayer" />
+      <module name="Bluetooth_Hell_Requiem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.bmeg257.mp4.Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PhysioMaster" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.PhysioMaster" />
       <module name="Bluetooth_Hell_Requiem" />
@@ -76,50 +89,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CaclulatorTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleAudioPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.SimpleAudioPlayer" />
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
+          <option name="PATTERN" value="main.java.bmeg257.mp4.Game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
-      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.CaclulatorTests" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Video" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.bmeg257.mp4.Game.Video" />
       <module name="Bluetooth_Hell_Requiem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
+          <option name="PATTERN" value="main.java.bmeg257.mp4.Game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
-      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.ServerTest" />
-      <option name="METHOD_NAME" value="test3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServerTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bluetooth_Hell_Requiem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.bmeg257.mp4.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java.bmeg257.mp4.test" />
-      <option name="MAIN_CLASS_NAME" value="test.java.bmeg257.mp4.test.ServerTest" />
-      <option name="METHOD_NAME" value="test4" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,10 +118,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.PhysioMaster" />
-        <item itemvalue="JUnit.ServerTest.test4" />
-        <item itemvalue="JUnit.ServerTest.test3" />
+        <item itemvalue="Application.Video" />
         <item itemvalue="Application.Recorder" />
-        <item itemvalue="JUnit.CaclulatorTests.test1" />
+        <item itemvalue="Application.MediaPlayer" />
+        <item itemvalue="Application.SimpleAudioPlayer" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +143,11 @@
       <workItem from="1586066522113" duration="31370000" />
       <workItem from="1586210814431" duration="5045000" />
       <workItem from="1586274865784" duration="622000" />
-      <workItem from="1586282005407" duration="243000" />
+      <workItem from="1586282005407" duration="3694000" />
+      <workItem from="1586322337190" duration="1884000" />
+      <workItem from="1586324257238" duration="7431000" />
+      <workItem from="1586332294445" duration="312000" />
+      <workItem from="1586387631391" duration="1209000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -280,7 +275,56 @@
       <option name="project" value="LOCAL" />
       <updated>1586282134229</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Adding comments and such">
+      <created>1586282252297</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586282252297</updated>
+    </task>
+    <task id="LOCAL-00020" summary="videos!">
+      <created>1586331083846</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586331083846</updated>
+    </task>
+    <task id="LOCAL-00021" summary="videos!">
+      <created>1586331236626</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1586331236626</updated>
+    </task>
+    <task id="LOCAL-00022" summary="videos!">
+      <created>1586331785320</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586331785320</updated>
+    </task>
+    <task id="LOCAL-00023" summary="videos!">
+      <created>1586331947757</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1586331947757</updated>
+    </task>
+    <task id="LOCAL-00024" summary="videos!">
+      <created>1586332319651</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586332319651</updated>
+    </task>
+    <task id="LOCAL-00025" summary="videos!">
+      <created>1586388713475</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586388713475</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +357,8 @@
     <MESSAGE value="Survey added" />
     <MESSAGE value="Added orc and eye enemies" />
     <MESSAGE value="Adding comments and such" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding comments and such" />
+    <MESSAGE value="videos!" />
+    <option name="LAST_COMMIT_MESSAGE" value="videos!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -337,6 +382,91 @@
           <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Server/Client.java</url>
           <line>69</line>
           <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

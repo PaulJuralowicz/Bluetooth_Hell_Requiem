@@ -2,10 +2,8 @@ package main.java.bmeg257.mp4.Server;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.io.*;
@@ -28,7 +26,7 @@ public class Server {
     private static final String FILE_PATH = "local/data.txt";
     private static final String FAMOUS_HEROES = "local/leaderboard.txt";
     private static final String FOLDER_PATH = "local";
-    private ArrayList<Player> leaderboard = new ArrayList<>();
+    private ArrayList<Hero> leaderboard = new ArrayList<>();
     private static final int LEADERBOARD_SIZE = 10;
 
     /**
@@ -101,7 +99,7 @@ public class Server {
                 while (leaderboardReader.hasNextLine()) {
                     username = leaderboardReader.next();
                     score = leaderboardReader.nextInt();
-                    leaderboard.add(new Player(username, score));
+                    leaderboard.add(new Hero(username, score));
                 }
                 leaderboard.sort((x,y) -> Integer.compare(y.getScore(),x.getScore()));
             } catch (IOException e) {
@@ -186,7 +184,7 @@ public class Server {
             for(int i = 18 + username.length() + 3; input.charAt(i) != '}';i++){
                 score.append(input.charAt(i));
             }
-            leaderboard.add(new Player(username.toString(), Integer.parseInt(score.toString())));
+            leaderboard.add(new Hero(username.toString(), Integer.parseInt(score.toString())));
             leaderboard.sort((x,y) -> Integer.compare(y.getScore(),x.getScore()));
             try (FileWriter leaderWriter = new FileWriter(FAMOUS_HEROES, true)) {
                 leaderWriter.write("\n");

@@ -3,7 +3,9 @@ BMEG 257 pain
 
 All the source code for the BMEG 257 project!
 
-src has the code!
+src has everything!
+
+main has all the code!
 
 test has the coded tests!
 
@@ -28,3 +30,5 @@ multiply by 250 to get rad/s.
 The orientation of the device made it so the x-axis pointed downwards. This is why the x value is often large, as gravity is not removed.
 This is somewhat convient for reading the raw data, and desipite the fact that it is not really separated, you can tell when the
 next chunk of data begins as it starts with a really large and negative x value!
+
+Want to watch the videos? They area all in the local folder

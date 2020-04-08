@@ -15,7 +15,7 @@ public class Recorder {
         recordingDevice.initialize("btspp://001403055AA3:1;authenticate=false;encrypt=false;master=false.");
         Motion6Raw current;
         Scanner keyboard = new Scanner(System.in);
-        try (FileWriter excerciseWriter = new FileWriter("local/hipex(8s).txt")) {
+        try (FileWriter excerciseWriter = new FileWriter("local/hipab(8s).txt")) {
             System.out.println("Enter t to start");
             ArrayList<Motion6Raw> recording = new ArrayList<>();
             boolean pause = true;

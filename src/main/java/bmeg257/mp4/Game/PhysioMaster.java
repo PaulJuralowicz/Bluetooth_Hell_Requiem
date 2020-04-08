@@ -1,11 +1,9 @@
 package main.java.bmeg257.mp4.Game;
 
 import main.java.bmeg257.mp4.Server.Client;
-import main.java.bmeg257.mp4.Server.Player;
 import main.java.bmeg257.mp4.Server.Server;
 import main.java.bmeg257.mp4.arduino.Bluetooth;
 import main.java.bmeg257.mp4.arduino.Calculator;
-import main.java.bmeg257.mp4.arduino.Motion6;
 import main.java.bmeg257.mp4.arduino.Motion6Raw;
 
 import java.io.File;
@@ -144,7 +142,14 @@ public class PhysioMaster {
      * This is the physio portion, where ya do the physio excercise. Fun
      */
     private void physio(){
-        //TODO: VIDEO
+        //play video
+        String[] args = new String[1];
+        HipexVideo knee = new HipexVideo();
+        try{
+            knee.playVideo(args);
+        } catch (Exception e){
+            System.err.println("Error playing video");
+        }
         System.out.println("Lets do knee raise");
         System.out.println("5 reps");
         ArrayList<Motion6Raw> curr;
