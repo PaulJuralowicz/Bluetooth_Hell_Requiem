@@ -3,7 +3,9 @@ BMEG 257 pain
 
 All the source code for the BMEG 257 project!
 
-src has the code!
+src has everything!
+
+main has all the code!
 
 test has the coded tests!
 
