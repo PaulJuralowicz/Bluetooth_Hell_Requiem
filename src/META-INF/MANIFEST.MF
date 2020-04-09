@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: main.java.bmeg257.mp4.Game.PhysioMaster
+

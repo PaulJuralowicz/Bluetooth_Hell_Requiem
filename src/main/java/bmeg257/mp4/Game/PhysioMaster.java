@@ -142,14 +142,21 @@ public class PhysioMaster {
      * This is the physio portion, where ya do the physio excercise. Fun
      */
     private void physio(){
+        System.out.println("Here is a preview of today's excercises");
         //play video
         String[] args = new String[1];
-        HipexVideo knee = new HipexVideo();
-        try{
-            knee.playVideo(args);
-        } catch (Exception e){
-            System.err.println("Error playing video");
-        }
+        KneeVideo knee = new KneeVideo();
+        Thread vid = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    knee.playVideo(args);
+                }catch (Exception e){
+                    System.err.println("Error playing video");
+                }
+            }
+        });
+        vid.start();
         System.out.println("Lets do knee raise");
         System.out.println("5 reps");
         ArrayList<Motion6Raw> curr;
@@ -185,9 +192,8 @@ public class PhysioMaster {
             }
         }
         System.out.println("Excercise complete! Good work!");
-        //TODO: VIDEO
         System.out.println("Lets do hip extension");
-        System.out.println("5 reps");
+        System.out.println("10 reps");
         System.out.println("enter t to start");
         pause = true;
         while (pause){
@@ -196,7 +202,7 @@ public class PhysioMaster {
             }
         }
         rep = 0;
-        while(rep < 5){
+        while(rep < 10){
             curr = new ArrayList<>();
             try{
                 long start = System.currentTimeMillis();
@@ -220,8 +226,8 @@ public class PhysioMaster {
             }
         }
         System.out.println("Excercise complete! Good work!");
-        //TODO: VIDEO
-        System.out.println("Lets do hip abduction");
+        //TODO: VIDEO IN THE FUTURE
+        System.out.println("Lets do hip abduction\nThere is no video for this, as we ran out of time. Sorry");
         System.out.println("5 reps");
         System.out.println("enter t to start");
         pause = true;
