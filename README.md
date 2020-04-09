@@ -16,6 +16,8 @@ PROOF OF VARIOUS FUNCTIONS:
 Ideally, you would run the test yourself to see it in action, but if you would like examples of it working, look at the test code, 
 then reffer to the files in the local folder. The data.txt contains a log of what the server has recieved 
 (it should contain an example of a survery response). The various txt with excercise names contain sample raw data from the arduino.
+Additionally, the video demo is in local. If you want to get the program to work, you need to add the javafx library on your own.
+Yeah its inconvient, but it is a huge file to upload and git gets mad at me when I do it
 
 Lets quickly go over the structure of arduino raw data
 
@@ -31,4 +33,4 @@ The orientation of the device made it so the x-axis pointed downwards. This is w
 This is somewhat convient for reading the raw data, and desipite the fact that it is not really separated, you can tell when the
 next chunk of data begins as it starts with a really large and negative x value!
 
-Want to watch the videos? They area all in the local folder
+Want to watch the videos? They are all in the local folder
