@@ -70,7 +70,6 @@ public class BluetoothTest {
             long start = System.currentTimeMillis();
             //RECORD MOTION OVER 2 SECONDS
             while(System.currentTimeMillis() < start + 2000){
-                //fetch 60 data packet, see how long it takes
                 acc.add(test.fetchData());
             }
             ArrayList<Double> vel = new ArrayList<>();
@@ -87,7 +86,7 @@ public class BluetoothTest {
             dis.add(0.0);
             for (int i = 1; i < vel.size();  i++){
                 temp = dis.get(i-1) + vel.get(i-1)*deltaT + 0.5*(vel.get(i) - vel.get(i-1))*deltaT;
-                vel.add(temp);
+                dis.add(temp);
             }
             Assert.assertEquals(0.1, dis.get(dis.size()-1),0.05); //Compares the two doubles, with a delta of 0.05. This is in meters, so the delta is scaled as you would think
         } catch (Exception e) {
