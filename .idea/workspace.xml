@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61234ba2-c93f-4e0e-a068-50c8229f8495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/KneeVideo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/hipex1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/HipexVideo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/PhysioMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmeg257/mp4/Game/PhysioMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bmeg257/mp4/test/BluetoothTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +155,8 @@
       <workItem from="1586322337190" duration="1884000" />
       <workItem from="1586324257238" duration="7431000" />
       <workItem from="1586332294445" duration="312000" />
-      <workItem from="1586387631391" duration="9715000" />
+      <workItem from="1586387631391" duration="10491000" />
+      <workItem from="1587541918539" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="slowly making the arduino work. give it some time">
       <created>1584652165420</created>
@@ -343,7 +340,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586389300144</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Video bit is done. Yata">
+      <created>1586402073525</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1586402073525</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Video bit is done. Yata">
+      <created>1586402118410</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1586402118410</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +388,8 @@
     <MESSAGE value="Added orc and eye enemies" />
     <MESSAGE value="Adding comments and such" />
     <MESSAGE value="videos!" />
-    <option name="LAST_COMMIT_MESSAGE" value="videos!" />
+    <MESSAGE value="Video bit is done. Yata" />
+    <option name="LAST_COMMIT_MESSAGE" value="Video bit is done. Yata" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
